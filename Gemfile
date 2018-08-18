@@ -14,11 +14,10 @@ gem "pundit"
 gem "coffee-rails", "~> 4.2"
 gem "jbuilder", "~> 2.5"
 gem "turbolinks", "~> 5"
+gem "bootsnap", ">= 1.1.0", require: false
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
-gem "bootsnap", ">= 1.1.0", require: false
 
 group :development, :test do
   gem "pry-byebug"
@@ -39,6 +38,7 @@ group :test do
   gem "factory_bot_rails"
   gem "launchy"
   gem "selenium-webdriver"
+  gem "simplecov", require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
