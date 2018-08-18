@@ -22,6 +22,8 @@ gem "bootsnap", ">= 1.1.0", require: false
 
 group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]
+  gem "rspec-rails", "~> 3.7"
+  gem "rspec_junit_formatter"
 end
 
 group :development do
@@ -34,6 +36,8 @@ end
 group :test do
   gem "capybara", ">= 2.15", "< 4.0"
   gem "chromedriver-helper"
+  gem "factory_bot_rails"
+  gem "launchy"
   gem "selenium-webdriver"
 end
 
