@@ -16,9 +16,7 @@ describe "Dashboard::Home" do
     fill_in("Password confirmation", with: password, match: :prefer_exact)
     click_button("Sign up")
 
-    within("#flash") do
-      expect(page).to have_content("Welcome! You have signed up successfully.")
-    end
+    expect(page).to have_flash("Welcome! You have signed up successfully.")
   end
 
   it "can sign in" do
@@ -30,6 +28,6 @@ describe "Dashboard::Home" do
     fill_in("Password", with: user.password)
     click_button("Log in")
 
-    expect(page).to have_content("Signed in successfully.")
+    expect(page).to have_flash("Signed in successfully.")
   end
 end
