@@ -6,15 +6,15 @@ ruby "2.5.1"
 gem "devise"
 gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 3.11"
+gem "pundit"
 gem "rails", "~> 5.2.0"
 gem "sass-rails", "~> 5.0"
 gem "uglifier", ">= 1.3.0"
-gem "pundit"
 
+gem "bootsnap", ">= 1.1.0", require: false
 gem "coffee-rails", "~> 4.2"
 gem "jbuilder", "~> 2.5"
 gem "turbolinks", "~> 5"
-gem "bootsnap", ">= 1.1.0", require: false
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -35,6 +35,7 @@ end
 group :test do
   gem "capybara", ">= 2.15", "< 4.0"
   gem "chromedriver-helper"
+  gem "codecov", require: false
   gem "factory_bot_rails"
   gem "launchy"
   gem "selenium-webdriver"
